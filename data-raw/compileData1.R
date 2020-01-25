@@ -12,7 +12,8 @@ treeData <-
 
 siteData <- 
   read_csv("data-raw/Site_data_raw.csv") %>% 
-  mutate_each_(funs(factor(.)),1:2) # convert first two columns to factors
+  mutate_each_(funs(factor(.)),vars(c("Opening","Plot","BGC.unit","SMR","SNR","Site.series"))) # convert first two columns to factors
+
 
 # Concatenate data into 1 data set
 dat<-
