@@ -1,0 +1,37 @@
+---
+title: "Initial data review"
+author: "Hardy Griesbauer"
+date: "24/01/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+# Load data
+load("../../data/dat.RData")
+
+```
+
+
+## Preliminary stats
+
+### Number of trees sampled
+```{r}
+
+dat %>% 
+  group_by(Species) %>% 
+  summarise(Num=n()) %>% 
+  arrange(desc(Num)) %>% 
+  kable()
+
+```
+
+## Number of Openings, Plots, and BGC units
+dat %>% 
+  group_by(Species) %>% 
+  summarise(Num=n()) %>% 
+  arrange(desc(Num)) %>% 
+  kable()
+
