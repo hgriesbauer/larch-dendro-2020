@@ -18,7 +18,11 @@ siteData <-
 # Concatenate data into 1 data set
 dat<-
   treeData %>% 
-  left_join(siteData,by=c("Opening","Plot"))
+  left_join(siteData,by=c("Opening","Plot")) %>% 
 
+# Bring in planting year
+  left_join(read_csv("data-raw/plantingYear.csv"),by="Opening")
+  
+  
 # Save
 save(dat,file="data/dat.RData")
