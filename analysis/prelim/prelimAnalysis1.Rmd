@@ -8,12 +8,20 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
+library(lme4)
+library(lmerTest)
 
 # Load data
 load("../../data/dat.RData")
 
 ```
-
+## Roadmap
+Ideas for analysis:
+- Tree Height ~ Species + Age + Basal area + BGC Unit + Site Series + (1|Opening/Plot)
+- Tree DBH ~ same variables as above
+- Try the above with separate models for each species
+- Generate provenance and site normals, and compare the two (generate climatic distances)
+- 
 
 ## Preliminary stats
 
@@ -24,14 +32,53 @@ dat %>%
   group_by(Species) %>% 
   summarise(Num=n()) %>% 
   arrange(desc(Num)) %>% 
-  kable()
+  knitr::kable()
 
 ```
 
 ## Number of Openings, Plots, and BGC units
+
+```{r} 
+
 dat %>% 
-  group_by(Species) %>% 
+  group_by(BGC.unit,Opening,Plot) %>% 
   summarise(Num=n()) %>% 
-  arrange(desc(Num)) %>% 
-  kable()
+  ungroup() %>% 
+  group_by(BGC.unit,Opening) %>% 
+  summarise(Plots=n(),
+            Trees=sum(Num)) %>% 
+  arrange(desc(Plots)) %>% 
+  knitr::kable()
+
+```
+
+## Fixed effects models
+
+Height model
+
+```{r}
+# Western larch fixed effects
+
+height.fit<-
+  dat %>% 
+  filter(Species%in%c("Lw")) %>% 
+  mutate(Age=2019-YearPlanted+1) %>% 
+  lmer(Height~BGC.unit+SMR+(1|Opening/Plot)+(1|Age),data=.) 
+
+
+# Ponderosa pine
+height.fit<-
+  dat %>% 
+  filter(Species%in%c("Py")) %>% 
+  mutate(Age=2019-YearPlanted+1) %>% 
+  lmer(Height~SMR+(1|Opening/Plot),data=.) 
+
+summary(height.fit)
+
+
+```
+
+Controlling for age and plot nested within opening, larch height is controlled by soil moisture regime, but not climatic regime.
+
+
 
