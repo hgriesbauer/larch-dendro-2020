@@ -1,0 +1,101 @@
+---
+title: "Data_screening"
+author: "Hardy Griesbauer"
+date: "06/02/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data screening
+This document describes the process used to screen the data, fix errors, remove outliers, etc..
+The data file saved at the end of this file will be in the data folder.
+
+# Load data
+```{r}
+load("dat.RData") # note this file is saved in the data-raw folder
+```
+
+# Preliminary data screening
+
+```{r}
+# Check to make sure all species are coded correctly
+unique(dat$Species)
+
+```
+Note that 'W' refers to Willow, as per discussion with Ken.
+
+Other than that, all species look good.
+
+# Screen for outliers
+
+## DBH
+```{r}
+dat %>% 
+  ggplot(aes(y=DBH))+
+  geom_boxplot()
+
+```
+
+Some big trees in there!  Let's take a look at all trees over 25cm DBH
+
+```{r}
+
+dat[dat$DBH>25,]
+```
+Seem ok, although some of those trees are prerry wide for their heights.  I'll take a look at some of the plot cards to double check DBH measurements, however, this doesn't seem like a typo.
+
+## Height
+```{r}
+dat %>% 
+  ggplot(aes(y=Height))+
+  geom_boxplot()
+
+```
+
+Note that there are some 'NA' values for trees that were heavy leaners (we couldn't really record a height for them)
+
+## DBH vs Height
+Let's do a scatter of DBH vs Height to make sure there are no weird DBH-Height combinations
+```{r}
+dat %>% 
+  ggplot()+
+  aes(x=Height,y=DBH)+
+  geom_point()+
+  ylim(0,35)
+
+```
+
+Bottom portion of graph makes sense, as we generally measured trees > 4cm DBH
+
+## Cores taken 
+Make sure that trees identified as being cored make sense
+```{r}
+dat %>% 
+  filter(Core==1) %>% # filter for trees with core identified
+  group_by(Species) %>% 
+  summarise(n())
+```
+Doesn't make sense that they would have cored At, Bl, or EP.  Let's look at those:
+
+```{r}
+dat %>% 
+  filter(Core==1) %>% 
+  filter(Species%in%c("Bl","At","Ep"))
+
+```
+
+I took a look at the Ep tree in Plot 6 of Opening 83D75-20.  They did mark a '1'.  Doesn't really make sense, but I won't change anything at this point.
+
+# SAVE FILE
+So far, everything looks ok.  Can put more data screening methods above as I think of them.
+For now, will save data as final dataset.
+
+```{r}
+save(dat,file="../data/dat.RData")
+```
+
+
+

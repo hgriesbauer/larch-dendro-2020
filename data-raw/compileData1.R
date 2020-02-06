@@ -24,5 +24,6 @@ dat<-
   left_join(read_csv("data-raw/plantingYear.csv"),by="Opening")
   
   
-# Save
-save(dat,file="data/dat.RData")
+# Save in data-raw folder
+# Use data screening to fix/format/remove outliers, etc.. and save into 'data' folder
+save(dat,file="data-raw/dat.RData")
