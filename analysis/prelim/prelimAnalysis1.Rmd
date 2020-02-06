@@ -21,7 +21,10 @@ Ideas for analysis:
 - Tree DBH ~ same variables as above
 - Try the above with separate models for each species
 - Generate provenance and site normals, and compare the two (generate climatic distances)
-- 
+
+## Notes on Data
+Remove Carmella block from analysis, because no western larch were planted there
+
 
 ## Preliminary stats
 
@@ -47,10 +50,15 @@ dat %>%
   group_by(BGC.unit,Opening) %>% 
   summarise(Plots=n(),
             Trees=sum(Num)) %>% 
-  arrange(desc(Plots)) %>% 
+  ungroup() %>% 
+  group_by(BGC.unit) %>% 
+  summarise(Openings=n(),
+            Plots=sum(Plots),
+            Trees=sum(Trees)) %>% 
+  arrange(desc(Trees)) %>% 
   knitr::kable()
-
 ```
+
 
 ## Fixed effects models
 
