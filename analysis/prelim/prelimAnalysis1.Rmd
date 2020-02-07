@@ -69,19 +69,22 @@ Height model
 
 height.fit<-
   dat %>% 
+  filter(Crown.Status<4) %>% # remove any suppressed individuals
   filter(Species%in%c("Lw")) %>% 
   mutate(Age=2019-YearPlanted+1) %>% 
-  lmer(Height~BGC.unit+SMR+(1|Opening/Plot)+(1|Age),data=.) 
+  lmer(Height~SMR+(1|Opening/Plot)+(1|Age),data=.) 
 
 
 # Ponderosa pine
-height.fit<-
+dbh.fit<-
   dat %>% 
-  filter(Species%in%c("Py")) %>% 
+  filter(Species%in%c("Lw")) %>% 
   mutate(Age=2019-YearPlanted+1) %>% 
-  lmer(Height~SMR+(1|Opening/Plot),data=.) 
+  lmer(DBH~PlotBA+(1|Opening/Plot)+(1|Age),data=.) 
 
 summary(height.fit)
+summary(dbh.fit)
+
 
 
 ```

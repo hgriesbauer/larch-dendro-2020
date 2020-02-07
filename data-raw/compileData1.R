@@ -7,8 +7,11 @@ treeData <-
   read_csv("data-raw/Tree_data_raw.csv") %>% 
   mutate_each_(funs(factor(.)),1:4) %>%  # convert first four columns to factors
   mutate(Comms=X14) %>% # rename 14th column
-    dplyr::select(-X14) # and delete
-  
+    dplyr::select(-X14) %>% # and delete
+  dplyr::select(1:7,Crown.Status=`FG/C/C`,everything()) %>% # rename column 'FG/C/C' 
+  # Put a dummy variable in Crown.Status where not recorded
+  mutate(Crown.Status=replace(Crown.Status,is.na(Crown.Status),0))
+
 
 siteData <- 
   read_csv("data-raw/Site_data_raw.csv") %>% 
@@ -16,11 +19,17 @@ siteData <-
 
 # Calculate plot basal area
 PlotBA<-
-  dat %>% 
+  treeData %>% 
   filter(Crown.Status!=4) %>% # remove all suppressed trees from basal area calculation
   group_by(Opening,Plot) %>% 
   summarise(PlotBA=sum(DBH)*200*0.0001)   # multiply by 200 to get per hectare basal area
 
+# Calculate tree density per plot
+plotDensity<-
+  treeData %>% 
+  filter(Crown.Status!=4) %>% # remove all suppressed trees from basal area calculation
+  group_by(Opening,Plot) %>% 
+  summarise(PlotD=n())   # 
 
 # Concatenate data into 1 data set
 dat<-
@@ -30,11 +39,11 @@ dat<-
 # Bring in planting year
   left_join(read_csv("data-raw/plantingYear.csv"),by="Opening") %>% 
   
-# rename column 'FG/C/C' 
-  dplyr::select(1:7,Crown.Status=`FG/C/C`,everything()) %>% 
-  
 # Join with PlotBA
-  left_join(PlotBA,by=c("Opening","Plot"))
+  left_join(PlotBA,by=c("Opening","Plot")) %>% 
+  
+# Join with Plot Density
+  left_join(plotDensity,by=c("Opening","Plot"))
   
 
   
