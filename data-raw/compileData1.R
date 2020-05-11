@@ -51,4 +51,4 @@ dat<-
 
 # Save in data-raw folder
 # Use data screening to fix/format/remove outliers, etc.. and save into 'data' folder
-save(dat,file="data-raw/dat.RData")
+save(dat,file="data-raw/datRaw.RData")

@@ -15,7 +15,7 @@ The data file saved at the end of this file will be in the data folder.
 
 # Load data
 ```{r}
-load("dat.RData") # note this file is saved in the data-raw folder
+load("datRaw.RData") # note this file is saved in the data-raw folder
 ```
 
 # Preliminary data screening
@@ -25,9 +25,20 @@ load("dat.RData") # note this file is saved in the data-raw folder
 unique(dat$Species)
 
 ```
-Note that 'W' refers to Willow, as per discussion with Ken.
+Note that 'W' refers to Willow, as per discussion with Ken.  Let's remove willow from dataset.
+
+```{r remove willow from dataset}
+
+dat<-
+  dat %>% 
+  filter(Species!="W") %>%  # remove willow from dataset
+  mutate(Species=fct_drop(Species)) # drop factor level
+
+```
 
 Other than that, all species look good.
+
+
 
 # Screen for outliers
 
@@ -45,7 +56,7 @@ Some big trees in there!  Let's take a look at all trees over 25cm DBH
 
 dat[dat$DBH>25,]
 ```
-Seem ok, although some of those trees are prerry wide for their heights.  I'll take a look at some of the plot cards to double check DBH measurements, however, this doesn't seem like a typo.
+Seem ok, although some of those trees are pretty wide for their heights.  I'll take a look at some of the plot cards to double check DBH measurements, however, this doesn't seem like a typo.
 
 ## Height
 ```{r}
@@ -63,8 +74,7 @@ Let's do a scatter of DBH vs Height to make sure there are no weird DBH-Height c
 dat %>% 
   ggplot()+
   aes(x=Height,y=DBH)+
-  geom_point()+
-  ylim(0,35)
+  geom_point()
 
 ```
 
@@ -88,6 +98,29 @@ dat %>%
 ```
 
 I took a look at the Ep tree in Plot 6 of Opening 83D75-20.  They did mark a '1'.  Doesn't really make sense, but I won't change anything at this point.
+
+## Ages missing for some blocks
+```{r add ages}
+
+# 160_D23 planted in 2002
+# 83D75-20 planted in 1981
+dat<-
+  dat %>% 
+  mutate(YearPlanted=replace(YearPlanted,Opening=="160_D23",2002)) %>% 
+  mutate(YearPlanted=replace(YearPlanted,Opening=="83D75-20",1981))
+
+```
+
+## Change Opening number for 83D75-020
+Looking at the maps, it looks like it should be 83D75-30 not 20.  Let's change that.
+```{r}
+
+dat<-
+  dat %>% 
+  mutate(Opening=replace(Opening,Opening=="83D75-20","83D75-30"))
+
+```
+
 
 # SAVE FILE
 So far, everything looks ok.  Can put more data screening methods above as I think of them.

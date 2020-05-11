@@ -39,6 +39,8 @@ dat %>%
 
 ```
 
+Note, *W* denotes willow.  We can remove it from analysis.
+
 ## Number of Openings, Plots, and BGC units
 
 ```{r} 
@@ -72,7 +74,7 @@ height.fit<-
   filter(Crown.Status<4) %>% # remove any suppressed individuals
   filter(Species%in%c("Lw")) %>% 
   mutate(Age=2019-YearPlanted+1) %>% 
-  lmer(Height~SMR+(1|Opening/Plot)+(1|Age),data=.) 
+  lmer(Height~SMR+BGC.unit+(1|Opening/Plot)+(1|Age),data=.) 
 
 
 # Ponderosa pine
@@ -80,7 +82,15 @@ dbh.fit<-
   dat %>% 
   filter(Species%in%c("Lw")) %>% 
   mutate(Age=2019-YearPlanted+1) %>% 
-  lmer(DBH~PlotBA+(1|Opening/Plot)+(1|Age),data=.) 
+  lmer(DBH~BGC.unit+(1|Opening/Plot)+(1|Age),data=.) 
+
+dbh.fit<-
+  dat %>% 
+  filter(Species%in%c("Lw")) %>% 
+  mutate(Age=2019-YearPlanted+1) %>% 
+  lmer(DBH~Age+(1|Opening/Plot),data=.) 
+
+
 
 summary(height.fit)
 summary(dbh.fit)
@@ -91,5 +101,34 @@ summary(dbh.fit)
 
 Controlling for age and plot nested within opening, larch height is controlled by soil moisture regime, but not climatic regime.
 
+# PLOTTING TO UNDERSTAND DATA
+
+```{r dbh height plots}
+
+sppList=c("Lw")
+
+dat %>% 
+  filter(Species %in% sppList ) %>% 
+  filter(BGC.unit!="ESSFmv3") %>% #remove ESSFmv3
+  ggplot(aes(x=SMR,y=Height,group=BGC.unit,color=BGC.unit))+
+  geom_point()+
+  geom_smooth(method="lm")
 
 
+sppList=c("Pl")
+
+dat %>% 
+  filter(Species %in% sppList ) %>% 
+  filter(BGC.unit!="ESSFmv3") %>% #remove ESSFmv3
+  ggplot(aes(x=SMR,y=Height))+
+  geom_point()+
+  geom_smooth(method="lm")
+
+
+```
+
+```{r plot basal area}
+dat %>% 
+  ggplot(aes(x=BGC.unit,y=Aspect))+
+  geom_boxplot()
+```
