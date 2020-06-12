@@ -65,23 +65,39 @@ library(here)
 X<-
   rbind(
     
-    # dataCompile(folderID="3A-7 Run 1",siteID="3A-7"),
-    # dataCompile(folderID="3A-7 Run 2",siteID="3A-7"),
-    # dataCompile(folderID="3A-7 Run 1",siteID="3A-7"),
-    # dataCompile(folderID="154-75 Run 1",siteID="154-75"),
-    # dataCompile(folderID="154-75 Run 2",siteID="154-75"),
-    # dataCompile(folderID="154-75 Run 3",siteID="154-75"),
-    # dataCompile(folderID="292-67 Run 1",siteID="292-67"),
-    # dataCompile(folderID="292-67 Run 2",siteID="292-67"),
-    # dataCompile(folderID="292-67 Run 3",siteID="292-67"),
-    # dataCompile(folderID="409-3 Run 1",siteID="409-3"),
-    # dataCompile(folderID="409-3 Run 2",siteID="409-3"),
-    # dataCompile(folderID="409-3 Run 3",siteID="409-3"),
+    dataCompile(folderID="3A-7 Run 1",siteID="3A-7"),
+    dataCompile(folderID="3A-7 Run 2",siteID="3A-7"),
+    dataCompile(folderID="3A-7 Run 1",siteID="3A-7"),
+    dataCompile(folderID="154-75 Run 1",siteID="154-75"),
+    dataCompile(folderID="154-75 Run 2",siteID="154-75"),
+    dataCompile(folderID="154-75 Run 3",siteID="154-75"),
+    dataCompile(folderID="292-67 Run 1",siteID="292-67"),
+    dataCompile(folderID="292-67 Run 2",siteID="292-67"),
+    dataCompile(folderID="292-67 Run 3",siteID="292-67"),
+    dataCompile(folderID="409-3 Run 1",siteID="409-3"),
+    dataCompile(folderID="409-3 Run 2",siteID="409-3"),
+    dataCompile(folderID="409-3 Run 3",siteID="409-3"),
+    dataCompile(folderID="409-3 Run 4",siteID="409-4"),
+    dataCompile(folderID="411-1A-Run 1",siteID="411-1A"),
+    dataCompile(folderID="411-1A-Run 2",siteID="411-1A"),
+    dataCompile(folderID="411-1A-Run 3",siteID="411-1A"),
+    dataCompile(folderID="411-1A-Run 4",siteID="411-1A"),
+    dataCompile(folderID="411-1A-Run 5",siteID="411-1A"),
+    dataCompile(folderID="411-1A Run 6",siteID="411-1A"),
+    dataCompile(folderID="609-151 Run 1",siteID="609-151"),
+    dataCompile(folderID="609-151 Run 2",siteID="609-151"),
+    dataCompile(folderID="609-151 Run 3",siteID="609-151"),
+    dataCompile(folderID="835-063 Run 1",siteID="835-063"),
+    dataCompile(folderID="835-063 Run 2",siteID="835-063"),
+    dataCompile(folderID="835-063 Run 3",siteID="835-063"),
+    dataCompile(folderID="907-162 Run 1",siteID="907-162"),
+    dataCompile(folderID="907-162 Run 2",siteID="907-162"),
+    dataCompile(folderID="907-162 Run 3",siteID="907-162"),
+    dataCompile(folderID="907-162 Run 4",siteID="907-162")
     
     
-    
-    
-  )
+     )
+
 
 
  X<-
@@ -99,5 +115,7 @@ X %>%
  summarise(n()) %>% 
   View()
 
-pliDat<-X
-save(pliDat,file="pliDat.RData")
+treeDat<-X
+save(treeDat,file=here::here("data","offsiteDensity.RData"))
+
+     
