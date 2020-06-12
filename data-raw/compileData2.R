@@ -93,7 +93,11 @@ X<-
     dataCompile(folderID="907-162 Run 1",siteID="907-162"),
     dataCompile(folderID="907-162 Run 2",siteID="907-162"),
     dataCompile(folderID="907-162 Run 3",siteID="907-162"),
-    dataCompile(folderID="907-162 Run 4",siteID="907-162")
+    dataCompile(folderID="907-162 Run 4",siteID="907-162"),
+    dataCompile(folderID="907-162 Run 5",siteID="907-162"),
+    dataCompile(folderID="609-151 Run 4",siteID="609-151"),
+    dataCompile(folderID="411-1A Run 6",siteID="411-1A"),
+    dataCompile(folderID="CP3A-7 Run 4",siteID="3A-7")
     
     
      )
@@ -117,6 +121,11 @@ X %>%
   View()
 
 treeDat<-X
-save(treeDat,file=here::here("data","offsiteDensity.RData"))
+# save(treeDat,file=here::here("data","offsiteDensity.RData"))
+
+
+
+
+
 
      
