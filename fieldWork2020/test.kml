@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="test" id="test">
+	<SimpleField name="Site.Name" type="string"></SimpleField>
+	<SimpleField name="Mapsheet" type="string"></SimpleField>
+	<SimpleField name="Target.Species" type="string"></SimpleField>
+	<SimpleField name="Planting.Date" type="string"></SimpleField>
+	<SimpleField name="BGC.Unit" type="string"></SimpleField>
+	<SimpleField name="Elevation" type="int"></SimpleField>
+	<SimpleField name="Spp" type="string"></SimpleField>
+	<SimpleField name="Comments" type="string"></SimpleField>
+	<SimpleField name="Forest.Health" type="string"></SimpleField>
+	<SimpleField name="Competition" type="string"></SimpleField>
+</Schema>
+<Folder><name>test</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Fdi-2</SimpleData>
+		<SimpleData name="Mapsheet">93I076</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">Oct-57</SimpleData>
+		<SimpleData name="BGC.Unit">SBSmc2</SimpleData>
+		<SimpleData name="Elevation">1060</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Good site but steep w/ heavy snow load, burned.</SimpleData>
+		<SimpleData name="Forest.Health">Too much snow and frost damage too accept Fdi at this elevation.</SimpleData>
+		<SimpleData name="Competition">Likely early competition from  shrubs delaying early height growth.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-126.82462,54.77175</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Fdi-6</SimpleData>
+		<SimpleData name="Mapsheet">93L080</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">1959</SimpleData>
+		<SimpleData name="BGC.Unit">SBSmc2</SimpleData>
+		<SimpleData name="Elevation">765</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Good site, not a significant factor</SimpleData>
+		<SimpleData name="Forest.Health">Some sweep, occasional forking (? environmental factors)</SimpleData>
+		<SimpleData name="Competition">No significant competition from density or overtopping deciduous</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-126.12472,54.78572</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Fdi-10</SimpleData>
+		<SimpleData name="Mapsheet">93K013</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May-62</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">853</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Moderate site, south facing</SimpleData>
+		<SimpleData name="Forest.Health">Fewer forks, crooks and sweep than in other Fdi stands. Not a significant factor at plot. In general approximately 15% incidence</SimpleData>
+		<SimpleData name="Competition">Dead overstory Pl generally sparse and weren't likely a significant factor. No other competition concerns</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.43723,54.17801</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Fdi-12</SimpleData>
+		<SimpleData name="Mapsheet">93K013</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May-63</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">960</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Poor site, rocky ridge top</SimpleData>
+		<SimpleData name="Forest.Health">Many forks at young age (stunted trees)</SimpleData>
+		<SimpleData name="Competition">Tree competition not an issue</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.44651,54.1869</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Fdi-22</SimpleData>
+		<SimpleData name="Mapsheet">93K013</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">Oct-64</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">882</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Medium site, warm and well drained.  Good for Fd.</SimpleData>
+		<SimpleData name="Forest.Health">Occasional forking.  Not common.</SimpleData>
+		<SimpleData name="Competition">Not a significant adverse factor for dom and co-dom trees.  Some of the suppressed trees could be Fd seed-in</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.43548,54.17964</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Fdi-24</SimpleData>
+		<SimpleData name="Mapsheet">93L058</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May-66</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">852</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Site varies from medium to good.  Tree performance seems uniform.</SimpleData>
+		<SimpleData name="Forest.Health">Some forking in stand (&lt;5%), minor sweep (speed wobbles) in 30% of stems.</SimpleData>
+		<SimpleData name="Competition">Espacement normal (~ 1000 stems/ha) and no overstory competition.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-126.51275,54.5156</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Fdi-25</SimpleData>
+		<SimpleData name="Mapsheet">93K024</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">Jun-66</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">890</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Poor site at top of plot, medium midslope, and good on lower slope.  Warm aspect, well drained.  Generally good survival.</SimpleData>
+		<SimpleData name="Forest.Health">5% forking - frost?</SimpleData>
+		<SimpleData name="Competition">Not a significant factor although there are a few trees in dense patches that are moribund.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.21255,54.28074</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Fdi-27(1)</SimpleData>
+		<SimpleData name="Mapsheet">9.30E+87</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">1980</SimpleData>
+		<SimpleData name="BGC.Unit">SBSmc2</SimpleData>
+		<SimpleData name="Elevation">988</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Good site.  Heavy thimbleberry in openings my have been a contributing factor in survival.</SimpleData>
+		<SimpleData name="Forest.Health">No major FHFs evident.</SimpleData>
+		<SimpleData name="Competition">Not a significant factor.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-126.92941,53.83325</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Fdi-27(2)</SimpleData>
+		<SimpleData name="Mapsheet">9.30E+87</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">1980</SimpleData>
+		<SimpleData name="BGC.Unit">SBSmc2</SimpleData>
+		<SimpleData name="Elevation">1013</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Site not an important adverse factor.</SimpleData>
+		<SimpleData name="Forest.Health">Crooks, forks, broken tops common. Not frost prone though.</SimpleData>
+		<SimpleData name="Competition">Not a critical factor</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-126.92971,53.83347</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Fdi-30b</SimpleData>
+		<SimpleData name="Mapsheet">93F062</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">1980</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">1030</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Medium site (01 poor). Warm aspect. Areas upslope with stonier dryer soils.</SimpleData>
+		<SimpleData name="Forest.Health">Lot of top kill and forks (&gt;50%) due to frost.</SimpleData>
+		<SimpleData name="Competition">Location of individual seedlot unknown.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.5525,53.60459</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Fdi-31a</SimpleData>
+		<SimpleData name="Mapsheet">93F062</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">1980</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">1031</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Not a significant factor.</SimpleData>
+		<SimpleData name="Forest.Health">Frost caused mortality and top damage common.  Lot of bear claw marks on Fd but not Pl.</SimpleData>
+		<SimpleData name="Competition">Overtopping Pl caused Fd suppression in some areas of the stand.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.69922,53.61797</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93K003-6(1)</SimpleData>
+		<SimpleData name="Mapsheet">93K003</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May, 1988</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdw3</SimpleData>
+		<SimpleData name="Elevation">840</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Medium site.  Not frost prone although the NW aspect is not ideal.  Brush (Alnus) is moderate.</SimpleData>
+		<SimpleData name="Forest.Health">Some snow press.  Areas where top kill is more prevalent.</SimpleData>
+		<SimpleData name="Competition">Not a significant adverse factor</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.43558,54.03647</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93K003-6(2)</SimpleData>
+		<SimpleData name="Mapsheet">93K003</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May, 1988</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdw3</SimpleData>
+		<SimpleData name="Elevation">830</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Medium site.  Moderate brush which may have played a minor role in survival of planted Fd.</SimpleData>
+		<SimpleData name="Forest.Health">Frost a significant issue in open and an important factor even under At.  </SimpleData>
+		<SimpleData name="Competition">Competition a serious problem regarding growth but may have some effect on survival.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.43305,54.03941</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93K003-20(1)</SimpleData>
+		<SimpleData name="Mapsheet">93K003</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">June, 1988</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">805</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Good site.  Brush moderately heavy in openings (Rupa, Alvi, herbs).  Good growth.  Fd leaders 30-40 cm.  </SimpleData>
+		<SimpleData name="Forest.Health">Good survival at plot and low incidence of frost damage (although not absent).</SimpleData>
+		<SimpleData name="Competition">Fd above Alvi and so not a significant factor at this point although brush could have been a factor in early survival.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.50333,54.04188</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93K003-20(2)</SimpleData>
+		<SimpleData name="Mapsheet">93K003</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">June, 1988</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">823</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Good to medium site.  Moderate brush in area but low at plot.</SimpleData>
+		<SimpleData name="Forest.Health">No significant forest health issues in the plot.  Forking occasional in the area.</SimpleData>
+		<SimpleData name="Competition">Not an important factor.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.50378,54.04054</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93K003-51</SimpleData>
+		<SimpleData name="Mapsheet">93K003</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May-91</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdw3</SimpleData>
+		<SimpleData name="Elevation">804</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Medium site.  Brush low to moderate.  Not a significant adverse factor.</SimpleData>
+		<SimpleData name="Forest.Health">Some cold air ponding potential.  Little evidence of frost damage however.</SimpleData>
+		<SimpleData name="Competition">Not a significant adverse factor</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.42481,54.02893</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93M002-28(1)</SimpleData>
+		<SimpleData name="Mapsheet">93M002</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May, 1992</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">457</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Good to medium site.  No concerns.  No chance of cold air ponding.  Doesn't appear to have been broadcast burned.</SimpleData>
+		<SimpleData name="Forest.Health">Nothing significant.  Difficult to see tops but little forking apparent.</SimpleData>
+		<SimpleData name="Competition">Spacing tight (~1800/ha).  Canopy closed and very little brush in understory.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-127.74502,55.05141</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93M002-28(2)</SimpleData>
+		<SimpleData name="Mapsheet">93M002</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May, 1992</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">447</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Good to medium site.  Not burned.  No issues.  Leaders ~40-45 cm.</SimpleData>
+		<SimpleData name="Forest.Health">no issues evident.  Some trees with wobbly form typical of fast growing Fd</SimpleData>
+		<SimpleData name="Competition">~2000 stems/ha Fd.  Tight spacing and closed canopy.  Lower branches now dying.  Very good survival and dominance beginning to be expressed.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-127.7458,55.05349</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93M011-88(1)</SimpleData>
+		<SimpleData name="Mapsheet">93M011</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May, 1992</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">750</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Generally good site.  Moderate brush.  No cold air ponding.</SimpleData>
+		<SimpleData name="Forest.Health">Occasional broken stem (snow loading) and forks (frost) although relatively uncommon.</SimpleData>
+		<SimpleData name="Competition">No overtopping Pl or Hw on this side of the road and only the slowest growing Fd affected.  Not broadcast burned.  Survival seems good although original planting density unknown.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-127.8791,55.18853</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93M011-88(2)</SimpleData>
+		<SimpleData name="Mapsheet">93M011</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May, 1992</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">736</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Good site.  Low brush now but moderate to high potential.  Not a significant factor.</SimpleData>
+		<SimpleData name="Forest.Health">No cold air ponding.  A few trees in the stand with old forks or a new fork with lateral branch taking over.  Occasional snow press.</SimpleData>
+		<SimpleData name="Competition">Competition now becoming important but not initially a factor.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-127.87807,55.18969</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93M033-8</SimpleData>
+		<SimpleData name="Mapsheet">93M033</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May, 1989</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">697</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Good site. Likely early brush competition.  Good aspect.</SimpleData>
+		<SimpleData name="Forest.Health">Probably some frost damage causing minor forking.  Most trees quickly re-established a dominant leader.</SimpleData>
+		<SimpleData name="Competition">Not a significant issue.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-127.56596,55.33124</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93M033-9(1)</SimpleData>
+		<SimpleData name="Mapsheet">93M033</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May, 1989</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">575</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Medium to good site. West aspect.  Well drained soils.  No cold air ponding.</SimpleData>
+		<SimpleData name="Forest.Health">Relatively little frost damage</SimpleData>
+		<SimpleData name="Competition">Competition a significant factor w/some Hw natural advance regen doing initially better than Fd.  Brush not an issue.  Area not burned.  Initial planting density unknown.  Survival good in pockets.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-127.57175,55.33297</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93M033-9(2)</SimpleData>
+		<SimpleData name="Mapsheet">93M033</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May, 1989</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">580</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Medium site.  West aspect. Well drained. No cold air ponding. No issues.</SimpleData>
+		<SimpleData name="Forest.Health">Some evidence of bud kill and forking.  Two trees with snow press (see photo 9287).</SimpleData>
+		<SimpleData name="Competition">Competition generally an important factor.  Most Fd had slow initial growth and had a disadvantage relative to the advance regen and early seed-in.  Initial planting density unknown.  Pockets of good survival but overall survival may have been poor.  Area not burned.  Leaders 50 cm on codom trees.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-127.57165,55.33167</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93M052-28(1)</SimpleData>
+		<SimpleData name="Mapsheet">93M052</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May, 1989</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">432</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Medium site. Moderate brush.  No cold air ponding.  Not a significant factor.</SimpleData>
+		<SimpleData name="Forest.Health">Evidence of frost damage minimal.  No other significant forest health issues.</SimpleData>
+		<SimpleData name="Competition">Some Fd with slow initial growth not in main canopy.  Some natural stocking may have had an early height advantage.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-127.73379,55.51593</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93M052-28(2)</SimpleData>
+		<SimpleData name="Mapsheet">93M052</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">May, 1989</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">435</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Medium site.  Low brush. Well suited to Fd.</SimpleData>
+		<SimpleData name="Forest.Health">More bud necrosis and kill of terminal flush than the other plot in this block.  Pl growth suffering in recent years because of Dothistroma.</SimpleData>
+		<SimpleData name="Competition">Not a significant factor, however, some trees established earlier than the Fd.  </SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-127.73099,55.51391</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">103I099-3(1)</SimpleData>
+		<SimpleData name="Mapsheet">103I099</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">June, 1992</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">417</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Poor , stony, warm exposure/  A significant factor in slower growth.</SimpleData>
+		<SimpleData name="Forest.Health">Some forking from frost.  Relatively infrequent.  No other significant forest health factors.</SimpleData>
+		<SimpleData name="Competition">Interspecific competition has significant influence on some trees.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-128.36409,54.9422</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">103I099-3(2)</SimpleData>
+		<SimpleData name="Mapsheet">103I099</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">June, 1992</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">398</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Medium site.  Stony w/some seepage.  Warm aspect.  No cold air ponding.</SimpleData>
+		<SimpleData name="Forest.Health">Few forest health factors.  Not significant.</SimpleData>
+		<SimpleData name="Competition">Moderate interspecific competition.  May have played a minor role in slow growth for some trees.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-128.3647,54.9422</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">103P050-14(1)</SimpleData>
+		<SimpleData name="Mapsheet">103P050</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">June, 1989</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">583</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Good site.  Moderate brush.  Seepage. No cold air ponding.  Warm aspect.</SimpleData>
+		<SimpleData name="Forest.Health">Occasional forking.</SimpleData>
+		<SimpleData name="Competition">Not a significant factor at the plot.  In other areas ingress may have caused some mortality.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-128.1245,55.40992</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">103P050-14(2)</SimpleData>
+		<SimpleData name="Mapsheet">103P050</SimpleData>
+		<SimpleData name="Target.Species">Fdi</SimpleData>
+		<SimpleData name="Planting.Date">June, 1989</SimpleData>
+		<SimpleData name="BGC.Unit">ICHmc2</SimpleData>
+		<SimpleData name="Elevation">612</SimpleData>
+		<SimpleData name="Spp">Fdi</SimpleData>
+		<SimpleData name="Comments">Good site.  Brushy.  Warm aspect.  No cold air ponding.</SimpleData>
+		<SimpleData name="Forest.Health">More open stand.  More forks relative to first plot.  Most will recover.</SimpleData>
+		<SimpleData name="Competition">Brush competition may have been a factor in survival.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-128.12401,55.40989</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Lw7(1)</SimpleData>
+		<SimpleData name="Mapsheet">93L004</SimpleData>
+		<SimpleData name="Target.Species">Lw</SimpleData>
+		<SimpleData name="Planting.Date">May 1981</SimpleData>
+		<SimpleData name="BGC.Unit">SBSmc2</SimpleData>
+		<SimpleData name="Elevation">996</SimpleData>
+		<SimpleData name="Spp">Lw</SimpleData>
+		<SimpleData name="Comments">Med to poor site.  Very stony.  Some seepage.  Possible cold air ponding.  Seedlot probably inappropriate.</SimpleData>
+		<SimpleData name="Forest.Health">Areas with high incidence (&gt;50%) forks, dead tops, snow press and sweep.  Likely all frost and snow.   </SimpleData>
+		<SimpleData name="Competition">Pockets of higher Pl and Bl stocking with moderate brush.  Not a serious problem though.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-127.2548,54.01582</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Lw7(2)</SimpleData>
+		<SimpleData name="Mapsheet">93L004</SimpleData>
+		<SimpleData name="Target.Species">Lw</SimpleData>
+		<SimpleData name="Planting.Date">May 1981</SimpleData>
+		<SimpleData name="BGC.Unit">SBSmc2</SimpleData>
+		<SimpleData name="Elevation">1011</SimpleData>
+		<SimpleData name="Spp">Lw</SimpleData>
+		<SimpleData name="Comments">Medium site.  Low brush. Stony soils.  Some potential for cold air ponding.</SimpleData>
+		<SimpleData name="Forest.Health">Sections of stand with much higher incidence of forking .  Few problems at plot.</SimpleData>
+		<SimpleData name="Competition">Not significant factor.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-127.25618,54.01603</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Lw-8(1)</SimpleData>
+		<SimpleData name="Mapsheet">93I046</SimpleData>
+		<SimpleData name="Target.Species">Lw</SimpleData>
+		<SimpleData name="Planting.Date">May 1981</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdK</SimpleData>
+		<SimpleData name="Elevation">640</SimpleData>
+		<SimpleData name="Spp">Lw</SimpleData>
+		<SimpleData name="Comments">Good site although north and west aspect.</SimpleData>
+		<SimpleData name="Forest.Health">Very few issues (see Lw8(2))</SimpleData>
+		<SimpleData name="Competition">Not a significant factor.  Some small Lw, possibly a result of selfing.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-126.853472,54.479611</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Lw-8(2)</SimpleData>
+		<SimpleData name="Mapsheet">93L046</SimpleData>
+		<SimpleData name="Target.Species">Lw</SimpleData>
+		<SimpleData name="Planting.Date">May 1981</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">640</SimpleData>
+		<SimpleData name="Spp">Lw</SimpleData>
+		<SimpleData name="Comments">Good site although north aspect.</SimpleData>
+		<SimpleData name="Forest.Health">Very few issues.  In the stand only observed 1 broken top and a couple of forks.</SimpleData>
+		<SimpleData name="Competition">Not a significant factor.  Some small Lw, possibly a result of selfing.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-126.85332,54.47994</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Lw-9(b)</SimpleData>
+		<SimpleData name="Mapsheet">93F062</SimpleData>
+		<SimpleData name="Target.Species">Lw</SimpleData>
+		<SimpleData name="Planting.Date">1981</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">1020</SimpleData>
+		<SimpleData name="Spp">Lw</SimpleData>
+		<SimpleData name="Comments">Site poor to medium.  Dry site on most of plot.</SimpleData>
+		<SimpleData name="Forest.Health">Frost may have been responsible for poor survival.  Some dead tops on other Lw in area (1-4 years die back)</SimpleData>
+		<SimpleData name="Competition">Not a factor for trees 1-4.  Tree 6 in particular is surrounded by Pl and completely overtopped.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-125.5527,53.60444</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">Lw-12</SimpleData>
+		<SimpleData name="Mapsheet">93L097</SimpleData>
+		<SimpleData name="Target.Species">Lw</SimpleData>
+		<SimpleData name="Planting.Date">July 1982</SimpleData>
+		<SimpleData name="BGC.Unit">SBSmc2</SimpleData>
+		<SimpleData name="Elevation">965</SimpleData>
+		<SimpleData name="Spp">Lw</SimpleData>
+		<SimpleData name="Comments">Good site, better than average, some seepage.</SimpleData>
+		<SimpleData name="Forest.Health">Nothing evident in Lw</SimpleData>
+		<SimpleData name="Competition">Competition not abnormal (i.e. espacement correct)</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-126.76878,54.97016</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">093E098-19</SimpleData>
+		<SimpleData name="Mapsheet">93E098</SimpleData>
+		<SimpleData name="Target.Species">Lw</SimpleData>
+		<SimpleData name="Planting.Date">May 1981</SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">850</SimpleData>
+		<SimpleData name="Spp">Lw</SimpleData>
+		<SimpleData name="Comments">Poor site, low brush.  Dry site may have contributed to poor survival.</SimpleData>
+		<SimpleData name="Forest.Health">Not much evident.  Some snow press and top damage due to frost.</SimpleData>
+		<SimpleData name="Competition">Survival not great but generally good form on surviving trees.  Relatively few forks.  Occasional snow press on spindly stems (see photo).  Fairly high variability in stem size in Lw</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-126.4826,53.95286</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93E100-96 (1)</SimpleData>
+		<SimpleData name="Mapsheet">93E100</SimpleData>
+		<SimpleData name="Target.Species">Lw</SimpleData>
+		<SimpleData name="Planting.Date">May 1992</SimpleData>
+		<SimpleData name="BGC.Unit">SBSmc2</SimpleData>
+		<SimpleData name="Elevation">1008</SimpleData>
+		<SimpleData name="Spp">Lw</SimpleData>
+		<SimpleData name="Comments">Good site.  Brush moderately heavy.</SimpleData>
+		<SimpleData name="Forest.Health">High incidence of scars at base plus some bent stems at base from snow press.</SimpleData>
+		<SimpleData name="Competition">Conifer competition not a significant factor (nor deciduous).</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-126.14781,53.92669</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93E100-96(2)</SimpleData>
+		<SimpleData name="Mapsheet">93E100</SimpleData>
+		<SimpleData name="Target.Species">Lw</SimpleData>
+		<SimpleData name="Planting.Date">May 1992</SimpleData>
+		<SimpleData name="BGC.Unit">SBSmc2</SimpleData>
+		<SimpleData name="Elevation">1000</SimpleData>
+		<SimpleData name="Spp">Lw</SimpleData>
+		<SimpleData name="Comments">Good site.  Brush moderately heavy.</SimpleData>
+		<SimpleData name="Forest.Health">High incidence of scars at base plus some bent stems at base from snow press.</SimpleData>
+		<SimpleData name="Competition">Conifer competition not a significant factor (nor deciduous).</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-126.14809,53.9268</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#test">
+		<SimpleData name="Site.Name">93L048-32</SimpleData>
+		<SimpleData name="Mapsheet">93L048</SimpleData>
+		<SimpleData name="Target.Species">Lw</SimpleData>
+		<SimpleData name="Planting.Date"></SimpleData>
+		<SimpleData name="BGC.Unit">SBSdk</SimpleData>
+		<SimpleData name="Elevation">804</SimpleData>
+		<SimpleData name="Spp">Sx</SimpleData>
+		<SimpleData name="Comments">Good site, toe of slope, seepage</SimpleData>
+		<SimpleData name="Forest.Health">Relatively minor forking and sweep from frost and snow.</SimpleData>
+		<SimpleData name="Competition">Tree competition minor.  Brush may have been a factor in early survival.</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-126.48343,54.42758</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
