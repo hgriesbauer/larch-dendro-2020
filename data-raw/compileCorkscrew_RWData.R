@@ -76,8 +76,8 @@ x<-rbind(
   coreComp(4)
 )
 
-treeData<-x
+ckscrewData<-x
 
 setwd("~/Documents/Git/larch-dendro-2020")
-save(treeData,file="./data/treeData.RData")
+save(ckscrewData,file="./data/corkscrewData.RData")
      

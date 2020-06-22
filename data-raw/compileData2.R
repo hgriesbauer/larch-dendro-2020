@@ -110,8 +110,8 @@ X<-
    # mutate(plot=as.factor(plot)) %>% 
    #  mutate(treeID=str_sub(coreID,start=-1,end=-1)) %>% 
    # mutate(treeID=as.factor(treeID)) %>% 
-   dplyr::select(site,coreID,year,coreType,value) %>% 
-   arrange(site,coreType,year)
+   dplyr::select(site,coreID,Year=year,coreType,value) %>% 
+   arrange(site,coreType,Year)
 
 X %>% 
   group_by(site,plot) %>% 

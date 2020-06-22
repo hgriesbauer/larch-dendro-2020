@@ -21,17 +21,13 @@ siteList<-
   distinct(Opening,.keep_all = TRUE) %>%
   dplyr::select(-DBH.2010,-Height.2010) %>% 
   left_join(treeMetrics,by="Opening") %>% 
-  dplyr::select(-Plot.ID)
+  dplyr::select(-Plot.ID) %>% 
+  dplyr::select(-Spp) %>% 
+  rename(Species=Target.Species) %>% 
+  arrange(Species,desc(DBH.2010))
 
-
-
-
-# Summarize
-siteList %>% 
-  group_by(Target.Species) %>% 
-  summarise(n())
-  
-write.csv(siteList,file=here("fieldWork2020","sites2.csv"))
+# Write to csv
+write.csv(siteList,file=here("fieldWork2020","sitesSkeena_FdiLw.csv"))
 
 # Mapping
 sites<-
@@ -40,4 +36,4 @@ sites<-
 
 mapview(sites,zcol="Target.Species")
 
-st_write(sites, "test.kml", driver='kml', update=TRUE)
+st_write(sites, "sitesSkeena_FdiLw.kml", driver='kml', update=TRUE)
