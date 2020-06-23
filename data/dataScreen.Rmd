@@ -109,13 +109,34 @@ dat %>%
 
 # Need to come up with a function to identify cores with duplicated years
 ```{r}
-dat %>% 
+dupList<-
+  dat %>% 
   pluck("ringDat") %>% 
   filter(varType=="rw") %>% 
   group_by(Opening,coreID,Year) %>% 
   summarise(Num.Years=n()) %>% 
   filter(Num.Years>1) %>% 
   distinct(Opening,coreID)
+
+dupList
 ```
 
+### Now let's try and remove duplicates
+
+```{r remove duplicates}
+i=18
+
+dat %>% 
+  pluck("ringDat") %>% 
+  filter(varType=="rw") %>% 
+  filter(Opening==dupList$Opening[i]) %>% 
+  filter(coreID==dupList$coreID[i]) %>% 
+  arrange(Year)
+
+# List of cores that are doubled in the dataset, but are not duplicates (I think they need to be removed)
+# dupList[c(1,11,12,13,16,18)]
+
+# dupList[14] looks to be two cores, I think we can safely delete one
+
+```
 
