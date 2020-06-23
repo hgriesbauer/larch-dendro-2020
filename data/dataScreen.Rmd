@@ -1,0 +1,121 @@
+---
+title: "Data cleaning and screening for 2019 offsite dendro data"
+author: "Hardy Griesbauer"
+date: "23/06/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Load libraries
+library(here)
+library(tidyverse)
+library(dplR)
+
+
+# Load data
+load(here("data","offsiteData.RData"))
+
+```
+
+# Data summaries, screening, cleaning, etc.
+
+First, let's get a summary of number of trees in our dataset.
+
+```{r tree data summary}
+
+
+
+dat %>% 
+  pluck("treeDat") %>% 
+  group_by(Species) %>% 
+  summarise(Num.Trees=n())
+
+
+
+```
+
+We collected `r nrow(dat$treeDat)` tree measurements in `r dat %>% pluck("treeDat") %>% distinct(Opening,Plot) %>% nrow()` plots (3.99m radius) distributed across `r dat %>% pluck("treeDat") %>% distinct(Opening) %>% nrow()` openings in the Omineca Region.
+
+We also collected `r dat$ringDat %>% distinct(coreID) %>% nrow()` cores.
+
+## Data screening
+
+Let's create some boxplots of ring data to detect any outliers:
+
+```{r boxplots}
+
+dat %>% 
+  pluck("ringDat") %>% 
+  ggplot()+
+  geom_boxplot(aes(y=Value,fill=varType,labels=varType))
+
+```
+
+We can see that earlywood and ringwidth measurements exceed 20mm in some cases.  Let's take a closer look at those:
+
+```{r rw and ew outlier}
+
+dat %>% 
+  pluck("ringDat") %>% 
+  filter(varType %in% c("ew","rw")) %>% 
+  filter(Value>10) %>%  # let's look at values above 10mm
+  arrange(desc(Value))
+
+```
+
+I checked core 5-Py-1 from Opening 3A_7.  It does indeed look like the 2002 ring was exceptionally wide.  Same with tree 411_1_A Plot 2 Tree 10.  
+
+## Basal area increment
+Unfortunately we cannot compute basal area increment, because we didn't measure the 2019 ring, which would have been partially formed at the time of sampling.  In many cases, it fell off during extraction.  This means that we cannot calculate the outermost diameter for the 2018 year ring.
+
+## Ring patterns
+Let's look at some of the annual raw ring widths:
+
+```{r}
+siteName="411_1A"
+spp="Lw"
+ringVar="rw"
+
+dat %>% 
+  pluck("ringDat") %>% 
+  filter(Opening %in% siteName & Species %in% spp & varType %in% ringVar) %>% 
+  
+ 
+  
+  # plotting
+  ggplot()+
+  aes(x=Year,y=Value,fill=coreID)+
+  geom_line()+
+  facet_wrap(~coreID)
+
+
+
+```
+
+It looks like there are a few trees that had multiple cores.  Let's try and screen for them>:
+
+```{r}
+dat %>% 
+  pluck("ringDat") %>% 
+  filter(varType=="rw") %>% 
+  group_by(Opening,coreID) %>% 
+  summarise(Num.Tree=n()) %>% 
+  arrange(desc(Num.Tree))
+
+
+```
+
+# Need to come up with a function to identify cores with duplicated years
+```{r}
+dat %>% 
+  pluck("ringDat") %>% 
+  filter(varType=="rw") %>% 
+  group_by(Opening,coreID,Year) %>% 
+  summarise(Num.Years=n()) %>% 
+  filter(Num.Years>1) %>% 
+  distinct(Opening,coreID)
+```
+
+

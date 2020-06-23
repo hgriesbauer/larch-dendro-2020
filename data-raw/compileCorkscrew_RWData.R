@@ -47,7 +47,7 @@ varPrep<-function(varData="rw") {
     setNames(c("year","value")) %>% # rename value column
     mutate(site=site,plot=plot,species=species,tree=tree) %>% # create columns
     mutate(type=varData) %>%  # create type
-    dplyr::select(site,plot,species,tree,type,year,value) %>% # reorder
+    dplyr::select(site,plot,species,tree,type,year,value,coreID) %>% # reorder
     return() # return 
 }
 
