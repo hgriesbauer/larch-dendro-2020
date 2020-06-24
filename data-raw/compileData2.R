@@ -67,7 +67,7 @@ X<-
     
     dataCompile(folderID="3A-7 Run 1",siteID="3A-7"),
     dataCompile(folderID="3A-7 Run 2",siteID="3A-7"),
-    dataCompile(folderID="3A-7 Run 1",siteID="3A-7"),
+    dataCompile(folderID="3A-7 Run 3",siteID="3A-7"),
     dataCompile(folderID="154-75 Run 1",siteID="154-75"),
     dataCompile(folderID="154-75 Run 2",siteID="154-75"),
     dataCompile(folderID="154-75 Run 3",siteID="154-75"),
@@ -103,6 +103,16 @@ X<-
      )
 
 
+# X %>% 
+#   filter(coreType=="rw") %>% 
+#   group_by(coreID) %>% 
+#   summarise(num.yrs=n()) %>% 
+#   View()
+# 
+# X %>% 
+#   filter(coreType=="rw") %>% 
+#   filter(coreID=="1-LW1")
+
 
  X<-
    X %>% 
@@ -123,7 +133,12 @@ X %>%
 treeDat<-X
  save(treeDat,file=here::here("data","offsiteDensity.RData"))
 
+#
+####################
+ # PROBLEM SCREENING
+ 
 
+   unique(X$coreID)
 
 
 
