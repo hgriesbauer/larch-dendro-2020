@@ -100,6 +100,7 @@ It looks like there are a few trees that had multiple cores.  Let's try and scre
 dat %>% 
   pluck("ringDat") %>% 
   filter(varType=="rw") %>% 
+  
   group_by(Opening,coreID) %>% 
   summarise(Num.Tree=n()) %>% 
   arrange(desc(Num.Tree))
@@ -123,20 +124,142 @@ dupList
 
 ### Now let's try and remove duplicates
 
-```{r remove duplicates}
-i=18
+Corkscrew block:
+
+```{r}
+
+opID="Corkscrew"
+plotID=6
+
+
+dat$treeDat %>% 
+  filter(Opening==opID & Plot==plotID) %>% 
+  arrange(Plot,Tree.Number) 
 
 dat %>% 
   pluck("ringDat") %>% 
   filter(varType=="rw") %>% 
-  filter(Opening==dupList$Opening[i]) %>% 
-  filter(coreID==dupList$coreID[i]) %>% 
-  arrange(Year)
+  filter(Opening==opID & Plot==plotID)
 
-# List of cores that are doubled in the dataset, but are not duplicates (I think they need to be removed)
-# dupList[c(1,11,12,13,16,18)]
 
-# dupList[14] looks to be two cores, I think we can safely delete one
+
+```
+
+Looks like we have two cores for tree #3 in plot 6.  We can likely safely remove one.
+
+
+
+------------
+Block 154_75
+
+```{r}
+opID="154_75"
+
+
+
+dat$treeDat %>% 
+  filter(Opening==opID & Plot==plotID) %>% 
+  arrange(Plot,Tree.Number) 
+
+dat %>% 
+  pluck("ringDat") %>% 
+  filter(varType=="rw") %>% 
+  filter(Opening==opID & Plot==plotID) %>% 
+  group_by(Tree.Number,Year) %>% 
+  summarise(n=n()) %>% 
+  filter(n>1)
+
+
+
+```
+
+Looks like we have core 4 duplicated.  We need to remove one of them, but not sure how we would do this easily, because the data for both cores are combined.  We'll just remove both cores.
+
+------------
+Block 3A_7
+
+```{r}
+opID="3A_7"
+plotID=3
+
+
+dat$treeDat %>% 
+  filter(Opening==opID & Plot==plotID) %>% 
+  arrange(Plot,Tree.Number) 
+
+dat %>% 
+  pluck("ringDat") %>% 
+  filter(varType=="rw") %>% 
+  filter(Opening==opID ) %>% View()
+
+
+```
+
+We have two cores without ID - we need to remove them.
+
+
+------------
+Block 907_162
+
+```{r}
+opID="907_162"
+
+dat$treeDat %>% 
+  filter(Opening==opID & Plot==plotID) %>% 
+  arrange(Plot,Tree.Number) 
+
+dat %>% 
+  pluck("ringDat") %>% 
+  filter(varType=="rw") %>% 
+  filter(Opening==opID ) %>% View()
+
+
+```
+
+
+We have a blank coreID in block 411_1A.  After some investigation, I think we need to remove the core.
+
+#### Remove problematic cores
+
+```{r}
+
+rw<-
+  dat %>% 
+  pluck("ringDat") %>% 
+  drop_na(coreID) %>% 
+  mutate(coreID=toupper(coreID)) %>% 
+  filter(!(Opening=="Corkscrew" & coreID=="6-LW-3")) %>% 
+  filter(!(Opening=="154_75" & coreID=="3-LW-4"))
+
+
+# Let's double check there are no empty coreID and no duplicated cores
+rw %>% 
+  filter(is.na(coreID))
+
+rw %>% 
+  filter(varType=="rw") %>% 
+  group_by(Opening,coreID,Year) %>% 
+  summarise(Num=n()) %>% 
+  filter(Num>1)
+
+
+```
+
+## Extract tree data
+```{r}
+
+treeData<-
+  dat %>% 
+  pluck("treeDat")
+
+
+
+```
+
+```{r}
+x<-list(rw,treeData)
+save(x,file="romData.rds")
+
 
 ```
 
